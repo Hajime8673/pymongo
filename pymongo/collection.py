@@ -360,12 +360,8 @@ class Collection(common.BaseObject, Generic[_DocumentType]):
     def __hash__(self) -> int:
         return hash((self.__database, self.__name))
 
-#     def __bool__(self) -> NoReturn:
-#         raise NotImplementedError(
-#             "Collection objects do not implement truth "
-#             "value testing or bool(). Please compare "
-#             "with None instead: collection is not None"
-#         )
+    def __bool__(self):
+        return True
 
     @property
     def full_name(self) -> str:
