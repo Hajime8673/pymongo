@@ -1157,12 +1157,12 @@ class Database(common.BaseObject, Generic[_DocumentType]):
 
     next = __next__
 
-    def __bool__(self) -> NoReturn:
-        raise NotImplementedError(
-            "Database objects do not implement truth "
-            "value testing or bool(). Please compare "
-            "with None instead: database is not None"
-        )
+#     def __bool__(self) -> NoReturn:
+#         raise NotImplementedError(
+#             "Database objects do not implement truth "
+#             "value testing or bool(). Please compare "
+#             "with None instead: database is not None"
+#         )
 
     def dereference(
         self,
