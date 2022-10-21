@@ -2123,9 +2123,9 @@ class TestCollection(IntegrationTest):
             cmd.to_dict(), SON([("find", "coll"), ("$dumb", 2), ("filter", {"foo": 1})]).to_dict()
         )
 
-    def test_bool(self):
-        with self.assertRaises(NotImplementedError):
-            bool(Collection(self.db, "test"))
+#     def test_bool(self):
+#         with self.assertRaises(NotImplementedError):
+#             bool(Collection(self.db, "test"))
 
     @client_context.require_version_min(5, 0, 0)
     def test_helpers_with_let(self):
